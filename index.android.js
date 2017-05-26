@@ -4,7 +4,7 @@ import {
   StyleSheet,
   View
 } from 'react-native';
-import {Header,Left,Right,Icon,Body,Title, Container, Content, Button, Text } from 'native-base';
+import {Header,Left,Icon,Body,Title, Form,Label,Input,Item, Container, Content, Button, Text } from 'native-base';
 
 export default class app extends Component {
   render() {
@@ -12,20 +12,27 @@ export default class app extends Component {
 
       <Container>
                 <Header>
-                    <Left>
-                        <Button transparent>
-                            <Icon name='arrow-back' />
-                        </Button>
-                    </Left>
+                <Left>
+                    <Button transparent>
+                        <Icon name='menu' />
+                    </Button>
+                </Left>
                     <Body>
-                        <Title>Header</Title>
+                        <Title>GitAPP</Title>
                     </Body>
-                    <Right>
-                        <Button transparent>
-                            <Icon name='menu' />
-                        </Button>
-                    </Right>
                 </Header>
+                <Content>
+                        <Form>
+                            <Item floatingLabel>
+                                <Label>Username</Label>
+                                <Input />
+                            </Item>
+                            <Item floatingLabel last>
+                                <Label>Password</Label>
+                                <Input />
+                            </Item>
+                        </Form>
+                    </Content>
             </Container>
     );
   }
